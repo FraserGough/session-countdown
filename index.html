@@ -62,7 +62,8 @@
 			function getRandom() {
 				const max = 5 * 86400000;
 				const min = -2 * 8640000;
-				return Math.random() * (max - min) + min;
+				const posOrNeg = Math.random() > 0.5 ? 1 : -1;
+				return (Math.random() * (max - min) + min) * posOrNeg;
 			}
 
 			function initialise() {
